@@ -1,7 +1,5 @@
 # CAR-ACT: Self-Driving Car Simulation
 
-![Self-Driving Car](images/self_driving_car.png)
-
 Welcome to the CAR-ACT repository! This project aims to create a realistic simulation environment for training and testing self-driving cars to understand their backend algorithms better.
 
 ## Overview
