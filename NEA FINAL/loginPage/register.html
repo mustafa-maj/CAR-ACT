@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Register • CAR-ACT</title>
+    <link rel="stylesheet" href="styling.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script defer src="utilities.js"></script>
+    <link rel = "icon" type = "image/png" href = "assets/images/logo2.png">   
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="assets/images/logo2.png" alt="">
+            </div>
+                <ul class="menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutMe.html">Our Story </a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register </a></li>
+                </ul>
+        </div>
+    </header>
+  <div class="container">
+    <form class="form" id="form" action="/">
+        <h1>Registration</h1>
+        <fieldset>
+        <div class="input-control">
+            <legend>Username</legend>
+            <input id="username" name="username" type="text">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <legend>Password</legend>
+            <input id="password"name="password" type="password">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <legend>Password again</legend>
+            <input id="password2"name="password2" type="password">
+            <div class="error"></div>
+        </div>
+        <button id="register" type="submit">Register</button>
+        <button id="create" style="display:none;"></button>
+        <button id="remove" style="display:none;"></button>
+        </fieldset>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+body{
+    background: url(/loginPage/assets/images/back.jpeg);
+    background-size: cover;
+    overflow:hidden;
+    display:flex;
+    justify-content:baseline;
+    align-items:left;
+}
+
+#verticalButtons{
+    position: fixed;
+    display:flex;
+    flex-direction:column;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px 7px 5px;
+    margin: 2px;
+    cursor:pointer;
+    background:orange;
+}
+button:hover{
+    background:blue;
+}
+
+#networkCanvas{
+    top: 0px;
+    right: 600px;
+    position: fixed;
+    max-height: 745px;
+    width:535px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px;
+    background: orange;
+}
+
+#carCanvas{
+    position:fixed;
+    bottom: 0;
+    right: 300px;
+    background:orange;
+}
+
+.dropdown{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:2px;
+    border: none;
+    border-radius: 5px;
+    background:orange;
+    padding:2px;
+}
+
+#description{
+    top: 0px;
+    right: 600px;
+    position: fixed;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    min-height: 745px;
+    width:535px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px;
+    background: orange;
+}
+
+#description h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+    text-decoration: underline;
+}
+
+#description p{
+    padding-bottom: 0px;
+    font-weight: 1000;
+    opacity: 0.7;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.7;
+    color:black;
+}
+
+.logo img {
+	width: 15%;
+	padding: 10px;
+    margin-top: 20px;
+    position: fixed;
+    left: 0;
+}
+
+.menu {
+    position: fixed;
+    padding: 10px;
+    margin-top: 40px;
+    left: 50px;
+    top: 100px
+}
+
+.menu li {
+	display: inline-block;
+}
+
+.menu li a {
+	background: red;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-size: 16px;
+	text-transform: uppercase;
+    color: #fff;
+}
+
+.menu li a:hover {
+	background: #fff;
+	color: #333;
+}
+
+#leaderboard{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    bottom: 0px;
+    left: 0px;
+    position: fixed;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+    width:250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px;
+    background: orange;
+}
+
+#score{
+    margin-bottom: 50px;
+    margin-right: 25px;
+    bottom: 0px;
+    right: 0px;
+    position: fixed;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    min-height: 200px;
+    width:200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px;
+    background: orange;
+}
+
+#leaderboard h2, #score h2{
+    margin-left: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+    text-decoration: underline;
+    position: relative;
+}
+
+h1{
+    position: absolute;
+    margin-top: 75px;
+    margin-left: 20px;
+    font-size: 75px;
+}

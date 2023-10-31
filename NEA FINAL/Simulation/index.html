@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Straight Roads • CAR-ACT</title>
+    <link rel="stylesheet" href="styling.css">
+    <link rel = "icon" type = "image/png" href = "/loginPage/assets/images/logo2.png"> 
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <header>
+            <div class="logo">
+                <img src="/loginPage/assets/images/logo2.png" alt="">
+            </div>
+                <ul class="menu">
+                    <li><a href="/loginPage/selector.html">Selection</a></li>
+                </ul>
+    </header>
+    <canvas id="carCanvas"></canvas>
+    <div id="verticalButtons">
+        <button onclick="save()">💾 | Save Car</button>
+        <button onclick="discard()">🗑️ | Delete Car</button>
+        <button onclick="loadNetwork()">🧠 | Show Network</button>
+        <button onclick="window.location.reload()">🔄 | Refresh Page</button>
+        <div class='dropdown'>
+            🧬| Mutation Amount
+            <select name="mutationAmount" id="mutationAmount" 
+                onchange="localStorage.setItem('mutationAmount',this.value)">
+                <option value="0.1">0.1</option>
+                <option value="0.2">0.2</option>
+                <option value="0.3">0.3</option>
+                <option value="0.4">0.4</option>
+                <option value="0.5" selected>0.5</option>
+                <option value="0.6">0.6</option>
+                <option value="0.7">0.7</option>
+                <option value="0.8">0.8</option>
+                <option value="0.9">0.9</option>
+                <option value="1.0">1.0</option>
+            </select>
+        </div>
+        <div class='dropdown'>
+            🤖| Number of Test Cars
+            <select name="carCount" id="carCount" 
+                onchange="localStorage.setItem('carCount',this.value)">
+                <option value="1" selected>1</option>
+                <option value="10">10</option>
+                <option value="100">100</option>
+                <option value="1000">1000</option>
+            </select>
+        </div>
+        <div class='dropdown'>
+            🛣 | Number of Lanes
+            <select name="laneNum" id="laneNum" onchange="localStorage.setItem('laneNum',this.value)">
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </div>
+        <div class='dropdown'>
+            🚗 | Number of Dummy Cars
+            <select name="dummyNum" id="dummyNum" onchange="localStorage.setItem('dummyNum',this.value)">
+                <option value="10">10</option>
+                <option value="20" selected>20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+        <div class='dropdown'>
+            ❌ | Save Simulation
+            <select name="reloadStatus" id="reloadStatus" onchange="localStorage.setItem('reloadStatus',this.value)">
+                <option value="0" selected>No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+    </div>
+    <canvas id="desCanvas"></canvas>
+    <div id="description">
+        <p>Dummy cars are generated randomly across the road, and the test cars try to overtake them. Most of the test cars 
+            won't work perfect intially (because they train as they go!), so you might want to change the number of test cars 
+            and the mutation amount, to make the algorithm's learning process faster. When testing with multiple cars, your 
+            main car highlighted on screen will be the test car that is travelling the farthest. The longer this car survives without 
+            crashing, the more points you get rewarded. Let's play now!
+        </p>
+        <h2>How it play:</h2>
+        <p>1) Chose your desired number of test cars (🤖), dummy cars (🚗) and lanes (🛣).</p>
+        <p>2) Let the simulation run and observe how the cars operate.</p>
+        <p>3) Whenever you see your main car performing well, click the "Delete Car" (🗑️) button, and then the
+             "Save Car" (💾) button. This will let the algorithm know this car is performing well, and its route will be used
+             by future cars after step 4.
+        </p>
+        <p>4) When all test cars crash or all the cars are stuck behind a dummy car with no progress being made, set save simulation (❌) to 
+            "yes", and change the number of test cars (🤖) or the mutation amount (🧬). Then refresh the page (🔄).
+        </p>
+        <p>5) You will notice that all test cars perform better now, repeat the steps above until your achieve the highest score!
+        </p>
+        <p>------------------------------------------------------------------------------------------</p>
+        <p>You can click the "Show Network" (🧠) button to see the neural network</p>
+    </div>
+    <canvas id="leaderboard"></canvas>
+    <div id="leaderboard">
+        <h2>leaderboard</h2>
+    </div>
+    <canvas id="carScore"></canvas>
+    <div id="score">
+        <h2>Your Score:</h2>
+        <h1 id="scoreNum"></h1>
+    </div>
+    <canvas id="networkCanvas"></canvas>
+    <script src="neuralNetwork.js"></script>
+    <script src="utilities.js"></script>
+    <script src="backgroundRoad.js"></script>
+    <script src="vehicleMovement.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
